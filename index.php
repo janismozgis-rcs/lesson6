@@ -1,8 +1,6 @@
 <?php
 include 'db.php';
-echo '<pre>';
-var_dump($_SERVER);
-die;
+
 include 'parts/header.php';
 
 if (isset($_GET['page']) && $_GET['page'] == 'articles') {
