@@ -36,6 +36,7 @@ if ($id) {
 
 if (count($erros) > 0) {
     // form is not valid
+    $_SESSION['errors'] = $erros;
     header('Location: /lesson6/?page=register&errors=true');
 } else {
     // register the user
@@ -45,5 +46,4 @@ if (count($erros) > 0) {
     $sqlInsert->execute();
 
     header('Location: /lesson6/?page=login');
-
 }
